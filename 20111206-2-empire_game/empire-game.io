@@ -34,22 +34,6 @@ Game := Object clone do(
 Player := Object clone do(
   stats := nil
   
-  /*
-  init := method(
-    stats = Map clone
-    stats atPut("grain",2000) // food
-    stats atPut("land",10000) // area
-    stats atPut("cash",5000) // moneys
-    stats atPut("peasants",500) // peoples
-    stats atPut("army",20) // soldiers
-    stats atPut("farms",1) // food generators
-    stats atPut("cities",1) // income generators
-    stats atPut("palace",5) // ego booster
-    stats atPut("tax",2) // taxation
-  )
-  */
-  // this doesn't work for some reason, probably scoping
-  
   init := method(
     stats = {
       "grain" : 2000,
@@ -106,7 +90,7 @@ Player := Object clone do(
     writeln("You must feed your people.")
     req := self stats["peasants"] * 5
     writeln("Your people need " .. req .. " grain to not starve.")
-    write("How much grain will you give them?  ")
+    write("How much grain will you give them (you have " .. self stats["grain"] .. ")?  ")
     togive := File standardInput readLine asNumber
     if (togive > self stats["grain"], 
       writeln("You don't have that much grain!"); 
