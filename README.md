@@ -17,4 +17,4 @@ Rules
 
 2. Use of pre-written libraries is allowed.
 
-3. Each program should do something "interesting"
+3. Each program should do something interesting.
