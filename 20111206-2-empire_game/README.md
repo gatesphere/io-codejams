@@ -1,4 +1,4 @@
-Empire game (part 1)
+Empire game (part 2)
 ====================
 Io Codejam - 20111206 (part 2)
 
