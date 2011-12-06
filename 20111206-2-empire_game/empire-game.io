@@ -1,7 +1,4 @@
-#!/usr/local/bin/io
 // Empire game
-
-//doFile("../lib/ioutils.io")
 
 // to do:
 // purchase
@@ -10,39 +7,6 @@
 // end conditions
 // penalty for taxrate
 // clean up output
-
-Object squareBrackets := method(
-  l := list()
-  call message arguments foreach(arg,
-    l append(l doMessage(arg))
-  )
-  l
-)
-
-List squareBrackets := method(index,
-  self at(call evalArgAt(0))
-)
-
-OperatorTable addAssignOperator(":" , "atPutValue" )
-
-Map atPutValue := method(
-  self atPut(
-    call evalArgAt(0) asMutable removePrefix("\"") removeSuffix("\"" ),
-    call evalArgAt(1)
-  )
-)
-
-curlyBrackets := method(
-  r := Map clone
-  call message arguments foreach(arg,
-    r doMessage(arg)
-  )
-  r
-)
-
-Map squareBrackets := method(
-  self at(call evalArgAt(0))
-)
 
 
 Game := Object clone do(
@@ -70,6 +34,7 @@ Game := Object clone do(
 Player := Object clone do(
   stats := nil
   
+  /*
   init := method(
     stats = Map clone
     stats atPut("grain",2000) // food
@@ -82,12 +47,13 @@ Player := Object clone do(
     stats atPut("palace",5) // ego booster
     stats atPut("tax",2) // taxation
   )
-  
+  */
   // this doesn't work for some reason, probably scoping
-  /*
+  
   init := method(
     stats = {
       "grain" : 2000,
+      "peasants" : 500,
       "land" : 10000,
       "cash" : 5000,
       "army" : 20,
@@ -97,7 +63,7 @@ Player := Object clone do(
       "tax" : 2
     }
   )
-  */ 
+  
   
   turn := method(weather,
     self weatherreport(weather)
