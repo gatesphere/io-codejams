@@ -11,3 +11,10 @@ If you have any questions, comments, or concerns, mail me at suschord@suspended-
 
 All code is released under the license found under license/license.txt
 
+Rules
+-----
+1. Each program should be written in under an hour, using the Io programming language.
+
+2. Use of pre-written libraries is allowed.
+
+3. Each program should do something "interesting"
