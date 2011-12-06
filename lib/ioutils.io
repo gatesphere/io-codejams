@@ -62,7 +62,7 @@ Map atPutValue := method(
   )
 )
 
-Object curlyBrackets := method(
+curlyBrackets := method(
   r := Map clone
   call message arguments foreach(arg,
     r doMessage(arg)
