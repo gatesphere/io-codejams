@@ -13,7 +13,7 @@ All code is released under the license found under license/license.txt
 
 Rules
 -----
-1. Each program should be written in under an hour, using the Io programming language.
+1. Each program (or part of a program) should be written in under an hour, using the Io programming language.
 
 2. Use of pre-written libraries is allowed.
 
