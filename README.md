@@ -18,3 +18,7 @@ Rules
 2. Use of pre-written libraries is allowed.
 
 3. Each program should do something interesting.
+
+Caveats
+-------
+These programs are by no means idiomatic or good Io programming practices.  In many cases, idioms are followed, but when pressed for time, I used sloppy or ugly ways to do things.  As such, do not expect good code quality out of these examples.  These are just toys and prototypes.
