@@ -2,7 +2,7 @@ Empire game (part 5)
 ====================
 Io Codejam - 20111211 (part 5)
 
-The game is in a fully functional state!  This is probably as "finished" as this version will ever be, aside from a few refactors here and there that won't be a part of a codejam, but rather released on my (blog)[http://blog.suspended-chord.info/], if I ever get around to it.
+The game is in a fully functional state!  This is probably as "finished" as this version will ever be, aside from a few refactors here and there that won't be a part of a codejam, but rather released on my [blog](http://blog.suspended-chord.info/), if I ever get around to it.
 
 
 Total time: 5 hours.  Not bad :)
@@ -17,7 +17,7 @@ on a unix system, or
 
   io rungame.io
   
-on any other system type.  This game relies upon *no* addons, and should run with a basic Io setup, such as from the (iobin project)[http://iobin.suspended-chord.info/].  Do note, however, that this game requires the ioutils.io file found in the lib directory of this repo.  If you've cloned the repo, you'll be just fine.
+on any other system type.  This game relies upon *no* addons, and should run with a basic Io setup, such as from the [iobin project](http://iobin.suspended-chord.info/).  Do note, however, that this game requires the ioutils.io file found in the lib directory of this repo.  If you've cloned the repo, you'll be just fine.
 
 About the game:
 ---------------
