@@ -13,6 +13,7 @@ Demo:
 
 
 *server side*
+
     $ ./server.io 
     SERVER: Listening on port 1234
     SERVER: Received connection from 127.0.0.1
@@ -31,6 +32,7 @@ Demo:
     SERVER: Connection from 127.0.0.1 closed
 
 *client side*
+
     $ telnet localhost 1234
     Trying 127.0.0.1...
     Connected to localhost.
