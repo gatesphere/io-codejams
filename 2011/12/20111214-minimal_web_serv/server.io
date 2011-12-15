@@ -53,6 +53,9 @@ Logic := Object clone do(
     )
     source = source .. "</ul><hr></body></html>"
     
+    length := source sizeInBytes
+    source = "\nHTTP/1.1 200 OK\nContent-Length: " .. length .. "\n\n" .. source
+    
     aSocket streamWrite(source)
   )
   
