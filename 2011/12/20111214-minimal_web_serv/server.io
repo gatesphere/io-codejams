@@ -6,8 +6,6 @@
 
 // based heavily on the sample MinimalWebServer.io
 
-// does not send any proper headers.
-
 Logic := Object clone do(
   rootdir := Directory with(System launchPath beforeSeq(System launchScript pathComponent))
   
@@ -27,7 +25,7 @@ Logic := Object clone do(
     if(f exists,
       if(f isDirectory,
         self index(aSocket, req .. "/"),
-        aSocket streamWrite(f contents)
+        aSocket streamWrite(setheaders(200,f contents))
       ),
       if(req endsWithSeq("index.html"),
         self index(aSocket, req beforeSeq("index.html")),
@@ -53,15 +51,30 @@ Logic := Object clone do(
     )
     source = source .. "</ul><hr></body></html>"
     
-    length := source sizeInBytes
-    source = "\nHTTP/1.1 200 OK\nContent-Length: " .. length .. "\n\n" .. source
+    
+    source = setheaders(200, source)
     
     aSocket streamWrite(source)
   )
   
   fourohfour := method(aSocket,
     aSocket streamWrite(
-    "<html><head><title>404 NOT FOUND</title></head><body><H1>404 NOT FOUND</H1></body></html>")
+      setheaders(404,
+        "<html><head><title>404 NOT FOUND</title></head><body><H1>404 NOT FOUND</H1></body></html>"
+      )
+    )
+  )
+  
+  setheaders := method(respcode, data,
+    length := data sizeInBytes
+    code := "\nHTTP/1.1 "
+    if(respcode == 404,
+      code = code .. "404 Not Found\n",
+      code = code .. "200 OK\n"
+    )
+    code = code .. "Content-Length: " .. length .. "\n\n"
+    data = code .. data
+    data
   )
 )
 

@@ -12,4 +12,6 @@ Needs the Socket addon, obviously.  Heavily based on the MinimalWebServer.io sam
 
 As you can tell, my current obsession is with client-server code.
 
+**UPDATE 20111215**: Now sends proper headers (404 and 200).
+
 -->Jake
