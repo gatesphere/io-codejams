@@ -1,6 +1,6 @@
 BMP Steganography example
 =========================
-Io Codejam - 2012310
+Io Codejam - 20120310
 
 
 This is a short example of digital steganography, or hiding information in plain sight.
@@ -17,13 +17,13 @@ This works by hiding 1 byte of the secret file in every 3 bytes (or 1 pixel) of 
 
 To encode a file:
   
-    ./steg.io cover.bmp steg.io secret.bmp
+    ./steg.io encode cover.bmp steg.io secret.bmp
     
 This will create a file, secret.bmp, which is the file cover.bmp with the data from steg.io encoded within it.
 
 To decode:
 
-    ./steg.io secret.bmp decoded.txt
+    ./steg.io decode secret.bmp decoded.txt
     
 This will take the file secret.bmp and create a new file, decoded.txt, consisting of the data hidden in the pixel values.
 
